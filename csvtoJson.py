@@ -13,9 +13,14 @@ dict_list = []
 for row in reader:
     dict = {}
     dict["ID"] = row["ID"]
-    dict["Sex"] = row["Sex"]
+    if row["Sex"] == "M":
+        dict["Sex"] = "Male"
+    elif row["Sex"] == "F":
+        dict["Sex"] = "Female"
+    else:
+        dict["Sex"] = "Unknown"
     dict["Team"] = row["Team"]
-    dict["Year"] = row["Year"]
+    dict["Year"] = int(row["Year"])
     dict["Season"] = row["Season"]
     dict["City"] = row["City"]
     dict["Sport"] = row["Sport"]
@@ -39,6 +44,8 @@ for row in reader:
             dict["Age"] = "Over-40"
     dict_list.append(dict)
 
+sorted_list = sorted(dict_list, key=lambda x: x["Year"])
+
 print(out_path)
 with open(out_path,'w') as out:
-    json.dump(dict_list, out)
+    json.dump(sorted_list, out)

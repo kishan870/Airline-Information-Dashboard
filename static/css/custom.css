@@ -1,0 +1,34 @@
+html, body, div {
+  height:60%;
+  padding: 0;
+  margin:0;
+}
+
+input[type=button] {
+  background-color : #0E73A4;
+  border : none;
+  color : white;
+  padding : 15px 24px;
+  text-align : center;
+  text-decoration: none;
+  display: inline-block;
+  font-size : 12px;
+}
+
+input[type=button]:hover {background-color : #4FA8D3}
+input[type=button]:active {background-color : #06385C}
+
+div.col-sm-10 {
+  width:400px;
+}
+.dc-chart g.row text {
+    fill: black;
+    font-size: 12px;
+}
+
+div.col-sm-12 {
+  width: 1300px;
+}
+#total-escalationsND {
+    font-size: 60px;
+}

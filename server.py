@@ -2,8 +2,6 @@ from flask import Flask, render_template, request, redirect
 import json
 import os
 from datetime import datetime
-#from FE_escalations import *
-#from sla2_feonlyVASANTH import *
 
 app = Flask(__name__)
 
